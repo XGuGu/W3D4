@@ -1,1 +1,32 @@
 /* PUT FLUID GRID CODE HERE */
+
+/* .col {
+  float: left;
+  padding-right: 10px;
+  box-sizing: border-box;
+} */
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+
+.col-1-1 {
+}
+
+.col-1-2 {
+  float: left;
+}
+
+.col-1-3 {
+  float: right;
+}
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
