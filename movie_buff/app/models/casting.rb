@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: castings
+#
+#  id       :bigint(8)        not null, primary key
+#  movie_id :integer          not null
+#  actor_id :integer          not null
+#  ord      :integer          not null
+#
+
 class Casting < ApplicationRecord
   belongs_to :actor,
     class_name: :Actor,
