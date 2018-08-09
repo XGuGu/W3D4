@@ -5,13 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Poll.destroy_all
+Question.destroy_all
+AnswerChoice.destroy_all
+Response.destroy_all
+
 
 starwar = User.create(username: 'starwar')
 lordofrings = User.create(username: 'lordofrings')
 tom = User.create(username: 'tom')
+master_hand = User.create(username: 'master_hand')
 
-food = Poll.create(author_id: starwar.id, title: 'Food')
-sleep_habits = Poll.create(author_id: tom.id, title: 'Sleep Habits')
+food = Poll.create(author_id: master_hand.id, title: 'Food')
+sleep_habits = Poll.create(author_id: master_hand.id, title: 'Sleep Habits')
 
 favorite_food = Question.create(poll_id: food.id, text: 'What is your favorite food?')
 steak = Question.create(poll_id: food.id, text: 'Do you like steak?')
